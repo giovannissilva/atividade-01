@@ -29,6 +29,7 @@ namespace atividade_01.View.CadastroCliente
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCliente));
             this.tbxNome = new System.Windows.Forms.TextBox();
             this.tbxCelular = new System.Windows.Forms.TextBox();
             this.tbxEmail = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@ namespace atividade_01.View.CadastroCliente
             this.btnValidar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblResul = new System.Windows.Forms.Label();
-            this.btnConfirmar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbxNome
@@ -76,6 +76,8 @@ namespace atividade_01.View.CadastroCliente
             // lblNome
             // 
             this.lblNome.AutoSize = true;
+            this.lblNome.BackColor = System.Drawing.Color.Transparent;
+            this.lblNome.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNome.Location = new System.Drawing.Point(67, 110);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(40, 15);
@@ -85,6 +87,7 @@ namespace atividade_01.View.CadastroCliente
             // lblCelular
             // 
             this.lblCelular.AutoSize = true;
+            this.lblCelular.BackColor = System.Drawing.Color.Transparent;
             this.lblCelular.Location = new System.Drawing.Point(67, 149);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(44, 15);
@@ -94,6 +97,7 @@ namespace atividade_01.View.CadastroCliente
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.Location = new System.Drawing.Point(67, 176);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(36, 15);
@@ -103,6 +107,7 @@ namespace atividade_01.View.CadastroCliente
             // lblCpf
             // 
             this.lblCpf.AutoSize = true;
+            this.lblCpf.BackColor = System.Drawing.Color.Transparent;
             this.lblCpf.Location = new System.Drawing.Point(67, 216);
             this.lblCpf.Name = "lblCpf";
             this.lblCpf.Size = new System.Drawing.Size(28, 15);
@@ -112,6 +117,7 @@ namespace atividade_01.View.CadastroCliente
             // lblGiovanni
             // 
             this.lblGiovanni.AutoSize = true;
+            this.lblGiovanni.BackColor = System.Drawing.Color.Transparent;
             this.lblGiovanni.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.lblGiovanni.Location = new System.Drawing.Point(578, 399);
             this.lblGiovanni.Name = "lblGiovanni";
@@ -121,17 +127,18 @@ namespace atividade_01.View.CadastroCliente
             // 
             // btnValidar
             // 
-            this.btnValidar.Location = new System.Drawing.Point(537, 201);
+            this.btnValidar.Location = new System.Drawing.Point(533, 271);
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Size = new System.Drawing.Size(99, 30);
             this.btnValidar.TabIndex = 10;
-            this.btnValidar.Text = "Confirmar CPF";
+            this.btnValidar.Text = "Confirmar";
             this.btnValidar.UseVisualStyleBackColor = true;
             this.btnValidar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(67, 22);
             this.label1.Name = "label1";
@@ -150,22 +157,12 @@ namespace atividade_01.View.CadastroCliente
             this.lblResul.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblResul.Click += new System.EventHandler(this.lblResul_Click);
             // 
-            // btnConfirmar
-            // 
-            this.btnConfirmar.Location = new System.Drawing.Point(456, 301);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
-            this.btnConfirmar.TabIndex = 13;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = true;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click_1);
-            // 
             // TelaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(644, 423);
-            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.lblResul);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnValidar);
@@ -200,6 +197,5 @@ namespace atividade_01.View.CadastroCliente
         private System.Windows.Forms.Button btnValidar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblResul;
-        private System.Windows.Forms.Button btnConfirmar;
     }
 }

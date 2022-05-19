@@ -41,7 +41,7 @@ namespace atividade_01.View.CadastroCliente
             if (cpfInformar.Length != 11)
             {
 
-                lblResul.Text =  "Informe seu CPF com 11 digitos.";
+                lblResul.Text = "Informe seu CPF com 11 digitos.";
                 lblResul.ForeColor = Color.Red;
                 return;
             }
@@ -110,20 +110,68 @@ namespace atividade_01.View.CadastroCliente
         {
 
         }
-
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-            validaCpf();
-        }
-
         private void btnConfirmar_Click_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void lblResul_Click(object sender, EventArgs e)
         {
 
         }
+        private void Dados()
+        {
+            if (string.IsNullOrWhiteSpace(tbxNome.Text))
+            {
+                MessageBox.Show("Nome é obrigatório.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbxNome.Focus();
+                tbxNome.SelectAll();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(tbxCelular.Text))
+            {
+                MessageBox.Show("Celular é obrigatório.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbxCelular.Focus();
+                tbxCelular.SelectAll();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(tbxEmail.Text))
+            {
+                MessageBox.Show("Email é obrigatório.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbxEmail.Focus();
+                tbxEmail.SelectAll();
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Cliente Cadastrado.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public void LimparTela()
+        {
+            foreach (Control ctl in this.Controls)
+            {
+                if (ctl is ComboBox)
+                {
+                    ctl.Text = string.Empty;
+                }
+                else if (ctl is TextBox)
+                {
+                    ctl.Text = string.Empty;
+                }
+                else if (ctl is Label && Convert.ToInt32(ctl.Tag).Equals(1))
+                {
+                    ctl.Text = string.Empty;
+                }
+            }
+        }
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            validaCpf();
+            Dados();
+            LimparTela();
+        }
+
     }
+
 }
